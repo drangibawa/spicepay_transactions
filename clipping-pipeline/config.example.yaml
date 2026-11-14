@@ -1,0 +1,46 @@
+# Copy to config.yaml and tweak for your footage.
+
+clip:
+  # Target short length (seconds)
+  min_duration: 12
+  max_duration: 35
+  # Seconds of lead-in before a detected peak
+  pre_roll: 3.5
+  # Seconds after the peak
+  post_roll: 8.0
+  # How many shorts to export
+  max_clips: 6
+  # Merge peaks closer than this (seconds)
+  merge_gap: 6.0
+
+detect:
+  # Audio analysis window
+  hop_seconds: 0.25
+  # Peak must be this many stddevs above mean RMS
+  z_threshold: 1.6
+  # Also keep relative loudness spikes
+  min_rms_ratio: 1.8
+  # Ignore first/last N seconds (intros, outros, menus)
+  ignore_head: 5.0
+  ignore_tail: 5.0
+
+render:
+  # 9:16 Shorts / Reels / TikTok
+  width: 1080
+  height: 1920
+  # center | blur_fill (gameplay centered over blurred 9:16 bg)
+  layout: blur_fill
+  fps: 30
+  video_crf: 20
+  audio_bitrate: 160k
+  # Burn-in hook text at top
+  burn_hooks: true
+  font_size: 64
+  # Safe margins for UI chrome
+  top_margin: 160
+  bottom_margin: 220
+
+hooks:
+  style: cricket24
+  # Extra custom hooks appended to the generator pool
+  extra: []

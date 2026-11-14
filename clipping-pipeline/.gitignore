@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+out/
+examples/sample_out/
+examples/_sample_work/
+examples/sample_gameplay.mp4
+*.wav
+config.yaml
+.DS_Store
