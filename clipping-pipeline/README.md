@@ -20,20 +20,20 @@ Optimized defaults for **Cricket 24 / IPL-style** powerplay footage (crowd roar 
 
 ```bash
 cd clipping-pipeline
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Quick start
 
 ```bash
 # Auto-detect highlights and export shorts
-python clip.py /path/to/your_gameplay.mp4 --out out/ --label "CSK vs RCB Powerplay"
+python3 clip.py /path/to/your_gameplay.mp4 --out out/ --label "CSK vs RCB Powerplay"
 
 # Manual ranges if you already know the timestamps
-python clip.py /path/to/your_gameplay.mp4 --manual-ranges 42-68 185-210 340-365 --out out/
+python3 clip.py /path/to/your_gameplay.mp4 --manual-ranges 42-68 185-210 340-365 --out out/
 
 # Detect only (no renders)
-python clip.py /path/to/your_gameplay.mp4 --dry-run --out out/
+python3 clip.py /path/to/your_gameplay.mp4 --dry-run --out out/
 ```
 
 Outputs:
@@ -64,8 +64,8 @@ Useful knobs:
 ## Demo on synthetic footage
 
 ```bash
-python examples/make_sample_gameplay.py --out examples/sample_gameplay.mp4
-python clip.py examples/sample_gameplay.mp4 --out examples/sample_out --max-clips 3
+python3 examples/make_sample_gameplay.py --out examples/sample_gameplay.mp4
+python3 clip.py examples/sample_gameplay.mp4 --out examples/sample_out --max-clips 3
 ```
 
 ## Suggested Cricket 24 workflow
@@ -80,7 +80,7 @@ python clip.py examples/sample_gameplay.mp4 --out examples/sample_out --max-clip
 
 ```bash
 cd clipping-pipeline
-python -m unittest discover -s tests -v
+python3 -m unittest discover -s tests -v
 ```
 
 ## Notes
